@@ -1,0 +1,69 @@
+body {
+    background-image: url("https://fondosmil.com/fondo/18820.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 20px;
+}
+
+form {
+    background-color: #6998AB;
+}
+.textoFuente{
+    font-size: 25px;
+}
+
+.numero {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.borderRadius {
+    border-radius: 15px 0px 0px 15px;
+}
+
+.msjErrorU {
+    margin-top: 10px;
+    border-radius: 15px 15px 15px 15px;
+}
+.msjErrorD {
+    margin-top: 10px;
+    border-radius: 15px 15px 15px 15px;
+}
+.msjErrorT {
+    margin-top: 10px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.colorTxt {
+    color: #D0D3D4;
+}
+.colorTxtCard{
+ color: #138D75
+}
+
+.paddingTB{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.jumbotrons{
+    margin-top: 130px;
+}
+.logoUD{
+    width: 5%;
+}
+div.biografia {
+    width: 50%;
+    padding: 15px;
+  }
+  
+  div.biografia img.izquierda {
+    float: left;
+
+    margin-right: 15px;
+  }
+  
+  
+  div.reset {
+    clear: both;
+  }
