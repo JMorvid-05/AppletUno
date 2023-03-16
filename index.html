@@ -27,143 +27,206 @@
 
         </div>
     </nav>
-    <br> <br>
-    <div class="jumbotron" style="background-color: #5a7b8c; color: #efc55d;">
-        <div class="container">
-            <h2>Probabilidad Condicional</h2>
-            <p class="textoFuente">Se refiere a la probabilidad de que un evento ocurra dado que otro
-                evento ya ha ocurrido. En otras palabras, se trata de calcular la probabilidad de que ocurra un
-                evento A, suponiendo que ya ha ocurrido un evento B. <br> <br>
+
+    <body>
+        <div class="container-fluid">
 
 
-                La fórmula para la probabilidad condicional es: <br>
-                <br>
-
-                <strong> P(A|B) = P(A ∩ B) / P(B)</strong>
-                <br>
-                <br>
-
-
-                Donde P(A|B) es la probabilidad condicional de A dado B, P(A ∩ B) es la probabilidad conjunta de
-                A y B, y P(B) es la probabilidad de B.
-
-                La interpretación de la fórmula es que la probabilidad de A dado B es igual a la probabilidad
-                conjunta de A y B dividida por la probabilidad de B. Esto significa que la probabilidad
-                condicional de A dado B es proporcional a la probabilidad conjunta de A y B, y es inversamente
-                proporcional a la probabilidad de B
-            </p>
-        </div>
-    </div>
-    <br> <br>
-
-    <div class="jumbotron" style="background-color: #d2f3ef; color: #4a8277;">
-        <div class="container">
-
-            <p class="textoFuente">El programa tiene como objetivo calcular la probabilidad de
-                encontrar los
-                X tubos
-                defectuosos en un lote de tubos que contiene un total de tubos buenos y defectuosos. El usuario deberá
-                proporcionar la cantidad de tubos buenos y defectuosos en el lote y el programa utilizará la teoría de
-                probabilidad condicional para calcular la probabilidad de encontrar los dos tubos defectuosos en cada
-                una de
-                las pruebas. <br> <br>
-
-                El programa mostrará al usuario los resultados de cada prueba, es decir, la probabilidad de encontrar el
-                último tubo defectuoso en la segunda, tercera y cuarta prueba, respectivamente. Además, se sumarán los
-                resultados obtenidos en las tres pruebas para determinar la probabilidad total de encontrar los dos
-                tubos
-                defectuosos en el lote.
-            </p>
-        </div>
-    </div>
-
-
-
-    <div class="jumbotron bg-transparent">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-sm">
-                    <div class="card ">
-                        <div class="card-body ">
-                            <div class="mb-6 p-3 paddingTB">
-                                <label for="numeroU" class="form-label colorTxtCard font-weight-bold">Digite la cantidad
-                                    de
-                                    tubos buenos:</label>
-                                <div class="input-group-prepend ">
-                                    <span class="input-group-text bg-white borderRadius " id="espacioU"><i id="simboloU"
-                                            class="fas "></i></span>
-                                    <input type="text" class="form-control numero" id="numeroU" required>
-                                </div>
-                                <div class="msjErrorU">
-                                    <div class=" alert alert-danger d-flex align-items-center">
-                                        <i class="fas fa-times"></i> &nbsp &nbsp
-                                        <div class="txtU">
-                                            ¡No se aceptan campos vacíos!
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="row mt-5">
+                <!-- Sección del contenido principal -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="img/Meyer.jpg" class="card-img">
                             </div>
-                            <div class="mb-6 p-3 paddingTB">
-                                <label for="numeroD" class="form-label colorTxtCard font-weight-bold">Digite la cantidad
-                                    de
-                                    tubos defectuosos:</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-white borderRadius" id="espacioD"><i id="simboloD"
-                                            class="fas "></i></span>
-                                    <input type="text" class="form-control numero" id="numeroD" required>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Paul Leonard Meyer</h5>
+                                    <p class="card-text">Matemático estadounidense nacido en 1934 que ha hecho
+                                        importantes contribuciones en la estadística y en particular en el análisis de
+                                        la varianza. Es conocido por ser uno de los autores de la popularidad del
+                                        uso de
+                                        la prueba ANOVA y por su trabajo en la regresión lineal y en la teoría de la
+                                        probabilidad.  El siguiente ejercicio es sacado del libro <a
+                                            href="https://www.academia.edu/37314062/Probabilidad_y_Aplicaciones_Estadisticas_Paul_Meyer">Probabilidad
+                                            y Aplicaciones Estadisticas</a> </p>
                                 </div>
-                                <div class="msjErrorD">
-                                    <div class=" alert alert-danger d-flex align-items-center">
-                                        <i class="fas fa-times"></i> &nbsp &nbsp
-                                        <div class="txtD">
-                                            ¡No se aceptan campos vacíos!
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <button id="btnHallar" class="btn btn-success item-center">Calcular Probabilidades/button>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div>
-                        <div class="card ">
-                            <div class="card-body">
-
-
-                                <h5 class="card-title colorTxtCard"> Resultado: </h5>
-                                <p class="card-text operaciones">
-
-                                </p>
-
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Capítulo 3 Probabilidad Condicional e Independencia. Ejercicio 3.2
+                            </h5>
 
+                            <p class="card-text"> Dos tubos defectuosos se confunden con dos buenos. Los tubos se
+                                prueban, uno
+                                por uno, hasta encontrar los defectuosos.
+                                <br>
+                                (a) ¿Cuál es la probabilidad de encontrar el último tubo defectuoso en la segunda
+                                prueba?
+                                <br>
+                                (b) ¿Cuál es la probabilidad de encontrar el último tubo defectuoso en la tercera
+                                prueba?
+                                <br>
+                                (C) ¿Cuál es la probabilidad de encontrar el último tubo defectuoso en la cuarta prueba?
+                                <br>
+                                (d) Agregue los números obtenidos anteriormente en (a), (b) y (c).
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-
         </div>
-    </div>
 
-    <footer class="bg-dark py-3">
-        <div class="container text-white text-center">
-            <h4>Applet // Universidad Distrital // 2023</h4>
+        <br> <br>
+        <div class="jumbotron" style="background-color: #5a7b8c; color: #efc55d;">
+            <div class="container">
+                <h2>Probabilidad Condicional</h2>
+                <p class="textoFuente">Se refiere a la probabilidad de que un evento ocurra dado que otro
+                    evento ya ha ocurrido. En otras palabras, se trata de calcular la probabilidad de que ocurra un
+                    evento A, suponiendo que ya ha ocurrido un evento B. <br> <br>
+
+
+                    La fórmula para la probabilidad condicional es: <br>
+                    <br>
+
+                    <strong> P(A|B) = P(A ∩ B) / P(B)</strong>
+                    <br>
+                    <br>
+
+
+                    Donde P(A|B) es la probabilidad condicional de A dado B, P(A ∩ B) es la probabilidad conjunta de
+                    A y B, y P(B) es la probabilidad de B.
+
+                    La interpretación de la fórmula es que la probabilidad de A dado B es igual a la probabilidad
+                    conjunta de A y B dividida por la probabilidad de B. Esto significa que la probabilidad
+                    condicional de A dado B es proporcional a la probabilidad conjunta de A y B, y es inversamente
+                    proporcional a la probabilidad de B
+                </p>
+            </div>
         </div>
-    </footer>
+        <br> <br>
 
-    <script src="https://kit.fontawesome.com/159635a384.js" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+        <div class="jumbotron" style="background-color: #d2f3ef; color: #4a8277;">
+            <div class="container">
+
+                <p class="textoFuente">El programa tiene como objetivo calcular la probabilidad de
+                    encontrar los
+                    X tubos
+                    defectuosos en un lote de tubos que contiene un total de tubos buenos y defectuosos. El usuario
+                    deberá
+                    proporcionar la cantidad de tubos buenos y defectuosos en el lote y el programa utilizará la teoría
+                    de
+                    probabilidad condicional para calcular la probabilidad de encontrar los dos tubos defectuosos en
+                    cada
+                    una de
+                    las pruebas. <br> <br>
+
+                    El programa mostrará al usuario los resultados de cada prueba, es decir, la probabilidad de
+                    encontrar el
+                    último tubo defectuoso en la segunda, tercera y cuarta prueba, respectivamente. Además, se sumarán
+                    los
+                    resultados obtenidos en las tres pruebas para determinar la probabilidad total de encontrar los dos
+                    tubos
+                    defectuosos en el lote.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="jumbotron bg-transparent">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card ">
+                            <div class="card-body ">
+                                <div class="mb-6 p-3 paddingTB">
+                                    <label for="numeroU" class="form-label colorTxtCard font-weight-bold">Digite la
+                                        cantidad
+                                        de
+                                        tubos buenos:</label>
+                                    <div class="input-group-prepend ">
+                                        <span class="input-group-text bg-white borderRadius " id="espacioU"><i
+                                                id="simboloU" class="fas "></i></span>
+                                        <input type="text" class="form-control numero" id="numeroU" required>
+                                    </div>
+                                    <div class="msjErrorU">
+                                        <div class=" alert alert-danger d-flex align-items-center">
+                                            <i class="fas fa-times"></i> &nbsp &nbsp
+                                            <div class="txtU">
+                                                ¡No se aceptan campos vacíos!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-6 p-3 paddingTB">
+                                    <label for="numeroD" class="form-label colorTxtCard font-weight-bold">Digite la
+                                        cantidad
+                                        de
+                                        tubos defectuosos:</label>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white borderRadius" id="espacioD"><i
+                                                id="simboloD" class="fas "></i></span>
+                                        <input type="text" class="form-control numero" id="numeroD" required>
+                                    </div>
+                                    <div class="msjErrorD">
+                                        <div class=" alert alert-danger d-flex align-items-center">
+                                            <i class="fas fa-times"></i> &nbsp &nbsp
+                                            <div class="txtD">
+                                                ¡No se aceptan campos vacíos!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button id="btnHallar" class="btn btn-success item-center">Calcular Probabilidades/button>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div>
+                            <div class="card ">
+                                <div class="card-body">
+
+
+                                    <h5 class="card-title colorTxtCard"> Resultado: </h5>
+                                    <p class="card-text operaciones">
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <footer class="bg-dark py-3">
+            <div class="container text-white text-center">
+                <h4>Applet // Universidad Distrital // 2023</h4>
+            </div>
+        </footer>
+
+        <script src="https://kit.fontawesome.com/159635a384.js" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="./main.js"></script>
 
 </html>
