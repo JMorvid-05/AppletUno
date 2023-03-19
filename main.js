@@ -301,11 +301,11 @@ $('.numero').on('input', function () {
 });
 var campoU = document.getElementById('numeroU');
 campoU.addEventListener('input', function () {
-    if (this.value.length > 8)
-        this.value = this.value.slice(0, 8);
+    if (this.value.length > 2)
+        this.value = this.value.slice(0, 2);
 });
 var campoD = document.getElementById('numeroD');
 campoD.addEventListener('input', function () {
-    if (this.value.length > 8)
-        this.value = this.value.slice(0, 8);
+    if (this.value.length > 2)
+        this.value = this.value.slice(0, 2);
 });
