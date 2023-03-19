@@ -7,10 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+        integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+        integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
+        crossorigin="anonymous"></script>
+
+
     <title>Applet 1</title>
     <link rel="shortcut icon" href="https://drive.google.com/file/d/1mLIcJNLUwcKXNXd2JrrQi0to0vXE8712/view?usp=sharing"
         type="image/x-icon" />
+
 </head>
 
 <body>
@@ -38,19 +47,18 @@
                     <div class="card">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="img/Meyer.jpg" class="card-img">
+                                <img src="img/Meyer.jpg" style="padding-top: 20%;" class="card-img">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Paul Leonard Meyer</h5>
                                     <p class="card-text">Matemático estadounidense nacido en 1934 que ha hecho
                                         importantes contribuciones en la estadística y en particular en el análisis de
-                                        la varianza. Es conocido por ser uno de los autores de la popularidad del
+                                        la varianza. <br> Es conocido por ser uno de los autores de la popularidad del
                                         uso de
                                         la prueba ANOVA y por su trabajo en la regresión lineal y en la teoría de la
-                                        probabilidad.  El siguiente ejercicio es sacado del libro <a
-                                            href="https://www.academia.edu/37314062/Probabilidad_y_Aplicaciones_Estadisticas_Paul_Meyer">Probabilidad
-                                            y Aplicaciones Estadisticas</a> </p>
+                                        probabilidad. <br> El siguiente ejercicio es sacado del libro Probabilidad y
+                                        Aplicaciones Estadisticas segunda edición </p>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +103,7 @@
                     La fórmula para la probabilidad condicional es: <br>
                     <br>
 
-                    <strong> P(A|B) = P(A ∩ B) / P(B)</strong>
+                    <strong> <span>P(A|B) = P(A ∩ B) / P(B)</span></strong>
                     <br>
                     <br>
 
@@ -115,14 +123,17 @@
         <div class="jumbotron" style="background-color: #d2f3ef; color: #4a8277;">
             <div class="container">
 
-            <p class="textoFuente">El programa tiene como objetivo calcular la probabilidad de
-                encontrar los
-                X tubos
-                defectuosos en un lote de tubos que contiene un total de tubos buenos y defectuosos. El usuario deberá
-                proporcionar la cantidad de tubos buenos y defectuosos en el lote y el programa utilizará la teoría de
-                probabilidad condicional para calcular la probabilidad de encontrar los dos tubos defectuosos en cada
-                una de
-                las pruebas. <br> <br>
+                <p class="textoFuente">El programa tiene como objetivo calcular la probabilidad de
+                    encontrar los
+                    X tubos
+                    defectuosos en un lote de tubos que contiene un total de tubos buenos y defectuosos. El usuario
+                    deberá
+                    proporcionar la cantidad de tubos buenos y defectuosos en el lote y el programa utilizará la teoría
+                    de
+                    probabilidad condicional para calcular la probabilidad de encontrar los dos tubos defectuosos en
+                    cada
+                    una de
+                    las pruebas. <br> <br>
 
                     El programa mostrará al usuario los resultados de cada prueba, es decir, la probabilidad de
                     encontrar el
@@ -183,9 +194,9 @@
                                 </div>
 
                             </div>
-                            <button id="btnHallar" class="btn btn-success item-center">Calcular Probabilidades/button>
+                            <button id="btnHallar" class="btn btn-success item-center">Calcular Probabilidades</button>
                         </div>
-                        <button id="btnHallar" class="btn btn-success item-center">Calcular Probabilidades</button>
+
                     </div>
                     <div class="col-sm">
                         <div>
@@ -193,9 +204,10 @@
                                 <div class="card-body">
 
 
-                                    <h5 class="card-title colorTxtCard"> Resultado: </h5>
-                                    <p class="card-text operaciones">
-
+                                    <h5 class="card-title colorTxtCard text-center"> Suma Probabilidades: </h5>
+                                    <p id="ecuacionCuatro" class="card-text katex  text-center"> </p>
+                                    <p class="card-text operaciones text-center">
+                                        <canvas style="margin-left: 20%;" id="grafico4"></canvas>
                                     </p>
 
                                 </div>
@@ -203,28 +215,73 @@
                         </div>
                     </div>
 
+
                 </div>
 
 
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Segunda Prueba</h5>
+                                <p id="ecuacionUno" class="card-text katex  text-center"> </p>
+                                <canvas id="grafico1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Tercera Prueba</h5>
+                                <p id="ecuacionDos" class="card-text katex  text-center"> </p>
+                                <canvas id="grafico2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Cuarta Prueba</h5>
+                                <p id="ecuacionTres" class="card-text katex text-center "> </p>
+                                <canvas id="grafico3"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <footer class="bg-dark py-3">
-            <div class="container text-white text-center">
-                <h4>Applet // Universidad Distrital // 2023</h4>
-            </div>
-        </footer>
 
-        <script src="https://kit.fontawesome.com/159635a384.js" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="./main.js"></script>
+
+
+    </body>
+
+    <footer class="bg-dark py-3">
+        <div class="container text-white text-center">
+            <h4>Applet // Universidad Distrital // 2023</h4>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/159635a384.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/katex@0.13.19/dist/katex.min.js"
+        integrity="sha384-0I3PdV7wVV8jyWV7kuUPn2/uMJn7v45i5Z5o7l5CHl/SuJ0w1mrxMhqE7Jp+TxkM"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <script src="./main.js"></script>
 
 </html>

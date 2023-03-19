@@ -62,8 +62,19 @@ div.biografia {
 
     margin-right: 15px;
   }
-  
+  #miGrafico {
+    width: 400px;
+    height: 400px;
+  }
   
   div.reset {
     clear: both;
   }
+  .grafico-contenedor {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  
