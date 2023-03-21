@@ -65,7 +65,7 @@ function calcularProbabilidad(buenos, defectuosos) {
     // Probabilidad de encontrar el último tubo defectuoso en la tercera prueba
     const prob3 = (defectuosos / total) * (buenos / (total - 1)) * ((defectuosos - 1) / (total - 2));
     mensajes.push('Probabilidad de encontrar el último tubo defectuoso en la tercera prueba: ' + prob3.toFixed(3));
-    miFormula = "\\frac{" + defectuosos + "}{" + total + "} \\cdot \\frac{" + (buenos) + "}{" + (total - 1) + "} \\cdot \\frac{" + (defectuosos - 1) + "}{" + (total - 1) + "} =" + prob3.toFixed(3);
+    miFormula = "\\frac{" + defectuosos + "}{" + total + "} \\cdot \\frac{" + (buenos) + "}{" + (total - 1) + "} \\cdot \\frac{" + (defectuosos - 1) + "}{" + (total - 2) + "} =" + prob3.toFixed(3);
     ecuacionUno = document.getElementById("ecuacionDos");
     katex.render(miFormula, ecuacionDos);
     // Probabilidad de encontrar el último tubo defectuoso en la cuarta prueba
