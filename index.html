@@ -71,7 +71,7 @@
                             <h5 class="card-title">Capítulo 3 Probabilidad Condicional e Independencia. Ejercicio 3.2
                             </h5>
 
-                            <p class="card-text"> Dos tubos defectuosos se confunden con dos buenos. Los tubos se
+                            <p class="card-text"> <strong id="texto">Dos tubos defectuosos</strong>se confunden con <strong id="texto">Dos buenos</strong>. Los tubos se
                                 prueban, uno
                                 por uno, hasta encontrar los defectuosos.
                                 <br>
@@ -261,6 +261,13 @@
             <h4>Applet // Universidad Distrital // 2023</h4>
         </div>
     </footer>
+     <script>
+      const palabra = document.querySelector("#texto");
+
+      palabra.addEventListener("click", () => {
+        alert("¡Haz hecho clic en la palabra!");
+      });
+    </script>
 
     <script src="https://kit.fontawesome.com/159635a384.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
